@@ -222,7 +222,7 @@ bool CC_Base::execute(int argc, char *argv[])
 			init_log(argc, argv, option_log_name_);
 
 		if (!read_options(desc, vm))
-			return false;
+			return vm.count("help");
 
 		if (init_programmer() && init_unit())
 		{
